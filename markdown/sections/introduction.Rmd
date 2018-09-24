@@ -7,4 +7,4 @@ output: html_document
 
 # Introduction
 
-Copy abstract given to AJ...
+R statistical software and associated tools have the potential to increase your efficiency, simplify collaboration, and develop reproducible products. Often the biggest limitation to these tools is lack of awareness. This document is intended to provide you with an overview of some of the many R-related tools and is intended for individuals with at least a basic understanding of R. We will learn to create R functions, a robust project structure using RStudio, aesthetically pleasing documentation with R Markdown, and interactive tools with Shiny. In addition, we will delve into the ecosystem of packages developed by RStudio, known as the Tidyverse (e.g., dplyr, tidyr, purr, and ggplot2), which provide useful and intuitive functions for data manipulation, processing, and visualization. Overall, this document will provide you with the working knowledge of some of the most widely used R related tools available for your next project.
