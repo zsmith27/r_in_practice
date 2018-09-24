@@ -1,0 +1,44 @@
+---
+title: "R in Practice (DRAFT)"
+author: "Zachary M. Smith"
+date: "September 23, 2018"
+output:
+  html_document:
+    toc: true
+    toc_depth: 6
+    toc_float: true
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+# knitr::opts_chunk$set(echo = TRUE)
+file.copy("sections/images", ".", recursive = TRUE)
+```
+
+```{r, child = 'sections/introduction.Rmd'}
+
+```
+
+```{r, child = 'sections/quick_reference.Rmd'}
+
+```
+
+```{r, child = 'sections/style_guide.Rmd'}
+
+```
+
+```{r, child = 'sections/update_software.Rmd'}
+
+```
+
+```{r, child = 'sections/version_control.Rmd'}
+
+```
+
+```{r, child = 'sections/rmarkdown.Rmd'}
+
+```
+
+```{r, child = 'sections/shiny.Rmd'}
+
+```

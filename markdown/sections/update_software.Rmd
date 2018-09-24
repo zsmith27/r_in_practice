@@ -1,0 +1,33 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "September 22, 2018"
+output: html_document
+---
+
+# Updating Software and Packages
+
+## R
+
+Run the following code in the R GUI (code copied from: https://www.r-statistics.com/2013/03/updating-r-from-r-on-windows-using-the-installr-package/). Make sure R Studio is closed.
+
+```{r, eval=FALSE}
+# installing/loading the package:
+if(!require(installr)) {
+install.packages("installr");
+require(installr)
+} #load / install+load installr
+
+# using the package:
+updateR()
+```
+
+
+
+## RStudio
+
+In RStudio -> Help -> Check for Updates -> follow instructions
+
+## R-Packages
+
+In RStudio -> Tools -> Check for Package Updates… - > follow instructions 
