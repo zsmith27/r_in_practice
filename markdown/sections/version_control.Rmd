@@ -53,7 +53,7 @@ Push commits from R Studio to the GitHub repository.
 
 When a repository is created it consist of a single branch labeled “master.” The master branch will suffice as you first develop the app. However, you may reach a point where the master branch is functioning well (without any known issues) but you want to make some dramatic development changes. Rather than committing the changes to the master branch (potentially breaking your working product), you can create a new isolated branch to work on your development changes. In this case, the branch would clone the current state of the master, and then any edits made to the new branch would not impact the master branch.
 
-When working in R Studio with GitHub, use the dropdown menu (located in the top right corner of the Git tab in the Environment pane) to select the branch you want to work on. In the image below I clicked on “master” and now I can see three branches are available for this project: 1) master, 2) Development, and 3) Zsmith. Simply select a name to change the branch you are working on.
+When working in R Studio with GitHub, use the drop-down menu (located in the top right corner of the Git tab in the Environment pane) to select the branch you want to work on. In the image below I clicked on “master” and now I can see three branches are available for this project: 1) master, 2) Development, and 3) Zsmith. Simply select a name to change the branch you are working on.
 
 ![](images/version_control/switch_branch.png)
 

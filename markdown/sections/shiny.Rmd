@@ -10,6 +10,8 @@ output: html_document
 ## What is Shiny?
 
 Shiny is an R statistical software package that enables the developer to create interactive web applications (apps). 
+
+__Example:__ https://zsmith.shinyapps.io/WQT_Shiny/
  
 ## Resources
 
@@ -33,7 +35,7 @@ In this file, you should include code that is static. This includes: loading lib
 
 ### Structure
 
-Shiny projects generally grow rapidly and it can become difficult to navigate hundreds of lines of code in a ui.R or server.R file. My preference is to break the code up into independent and more manageable scripts that are sourced in the ui.R or server.R files. For example, imagine you are developing an app containin two tabs, one dedicated to tabular data and one dedicated to an interactive map. I would develop separate R scripts for server code associated with each tab. Similarly, I would create separate R scripts for the ui code associated with each tab. These files are stored in the appropriate folders labeled either “ui” or “server.” When sourcing files in a shiny app you must specify “local = TRUE”.
+Shiny projects generally grow rapidly and it can become difficult to navigate hundreds of lines of code in a ui.R or server.R file. My preference is to break the code up into independent and more manageable scripts that are sourced in the ui.R or server.R files. For example, imagine you are developing an app which contains two tabs, one dedicated to tabular data and one dedicated to an interactive map. I would develop separate R scripts for server code associated with each tab. Similarly, I would create separate R scripts for the ui code associated with each tab. These files are stored in the appropriate folders labeled either “ui” or “server.” When sourcing files in a shiny app you must specify “local = TRUE”.
 ```{r, eval=FALSE}
 source("server/select_import_server.R", local = TRUE)
 ```
@@ -88,7 +90,7 @@ shinyapps.io is a shiny hosting platform provided by R Studio (http://www.shinya
         + Make sure you have created a shinyapps.io account (https://www.shinyapps.io/admin/#/login).
         + In the drop-down menu select “Manage Accounts.” This will bring you to the “Publishing Accounts” section of R Studios “Options.”
         + Select “Connect…”  -> “ShinyApps.io” option -> follow instructions.
-3.	The “Publish to Server” window will appear. Select all of the files that are necessary for the app to run. Do not include unnecessary files, as this could slow down your app or make the app too large to host under your current account settings. Check the “Launch browser” checkbox. Click “Publish.”
+3.	The “Publish to Server” window will appear. Select all of the files that are necessary for the app to run. Do not include unnecessary files, as this could slow down your app or make the app too large to host under your current account settings. Check the “Launch browser” check box. Click “Publish.”
 4.	A “Deploy” tab will appear in the console pane, which will inform you that R Studio is working on publishing your app. This will take a few minutes. If there are any issues, the app will stop deploying and you will receive an error message. 
 
 

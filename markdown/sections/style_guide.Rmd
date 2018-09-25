@@ -7,7 +7,7 @@ output: html_document
 
 # Style Guide
 
-Code style is more important than you may first imagine. Adobting a consistent style will make it easier for you and your collaborators to read and comprehend your code. Please review and in future R-code use Hadley Wickham's (http://style.tidyverse.org/index.html) style guide. As mentioned in Hadely Wickham's guide, his guide is adapted from Google's style guide (https://google.github.io/styleguide/Rguide.xml); therefore, there are many similarities. I do not want to recreate these style guides here, instead I want to highlight what I believe are some of the more important features.
+Code style is more important than you may first imagine. Adopting a consistent style will make it easier for you and your collaborators to read and comprehend your code. Please review and in future R-code use Hadley Wickham's (http://style.tidyverse.org/index.html) style guide. As mentioned in Hadely Wickham's guide, his guide is adapted from Google's style guide (https://google.github.io/styleguide/Rguide.xml); therefore, there are many similarities. I do not want to recreate these style guides here, instead I want to highlight what I believe are some of the more important features.
 
 ## Names
 
@@ -43,7 +43,7 @@ my.ts <- ts()
 
 ## Spacing and Indenting
 
-Please follow the spacing (http://style.tidyverse.org/syntax.html#spacing) and indenting (http://style.tidyverse.org/syntax.html#indenting) guide lines provided in Hadely Wickham's style guide. I find it very difficult to follow code that does not adhear to these guidelines.
+Please follow the spacing (http://style.tidyverse.org/syntax.html#spacing) and indenting (http://style.tidyverse.org/syntax.html#indenting) guide lines provided in Hadely Wickham's style guide. I find it very difficult to follow code that does not adhere to these guidelines.
 
 The following "good" and "bad" examples will create the exact same data frame. However, the "good" example is much easier to read and interpret.
 __Good Example:__
