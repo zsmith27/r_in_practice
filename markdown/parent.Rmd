@@ -23,7 +23,7 @@ file.copy("sections/images", ".", recursive = TRUE)
 
 ```
 
-```{r, child = 'sections/style_guide.Rmd'}
+```{r, child = 'sections/installation.Rmd'}
 
 ```
 
@@ -32,6 +32,10 @@ file.copy("sections/images", ".", recursive = TRUE)
 ```
 
 ```{r, child = 'sections/version_control.Rmd'}
+
+```
+
+```{r, child = 'sections/style_guide.Rmd'}
 
 ```
 
