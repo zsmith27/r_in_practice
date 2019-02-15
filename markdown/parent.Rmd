@@ -35,11 +35,11 @@ file.copy("sections/images", ".", recursive = TRUE)
 
 ```
 
-```{r, child = 'sections/style_guide.Rmd'}
+```{r, child = 'sections/rmarkdown.Rmd'}
 
 ```
 
-```{r, child = 'sections/rmarkdown.Rmd'}
+```{r, child = 'sections/style_guide.Rmd'}
 
 ```
 

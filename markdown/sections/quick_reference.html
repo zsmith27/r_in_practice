@@ -98,6 +98,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -105,14 +108,74 @@ button.code-folding-btn:focus {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -170,6 +233,54 @@ $(document).ready(function () {
 </ul></li>
 </ul></li>
 </ol>
+<div id="installation-links" class="section level2">
+<h2>Installation Links</h2>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Software</th>
+<th align="left">Link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">R</td>
+<td align="left"><a href="https://cran.r-project.org/bin/windows/base/" class="uri">https://cran.r-project.org/bin/windows/base/</a></td>
+</tr>
+<tr class="even">
+<td align="left">R Studio</td>
+<td align="left"><a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a></td>
+</tr>
+<tr class="odd">
+<td align="left">Git</td>
+<td align="left"><a href="https://git-scm.com/downloads" class="uri">https://git-scm.com/downloads</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="updating-software-and-packages" class="section level2">
+<h2>Updating Software and Packages</h2>
+<div id="r" class="section level3">
+<h3>R</h3>
+<p>Run the following code in the R GUI (code copied from: <a href="https://www.r-statistics.com/2013/03/updating-r-from-r-on-windows-using-the-installr-package/" class="uri">https://www.r-statistics.com/2013/03/updating-r-from-r-on-windows-using-the-installr-package/</a>). Make sure R Studio is closed.</p>
+<pre class="r"><code># installing/loading the package:
+if(!require(installr)) {
+install.packages(&quot;installr&quot;);
+require(installr)
+} #load / install+load installr
+
+# using the package:
+updateR()</code></pre>
+</div>
+<div id="rstudio" class="section level3">
+<h3>RStudio</h3>
+<p>In RStudio -&gt; Help -&gt; Check for Updates -&gt; follow instructions</p>
+</div>
+<div id="r-packages" class="section level3">
+<h3>R-Packages</h3>
+<p>In RStudio -&gt; Tools -&gt; Check for Package Updates… - &gt; follow instructions</p>
+</div>
+</div>
 </div>
 
 

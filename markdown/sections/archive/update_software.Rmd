@@ -22,8 +22,6 @@ require(installr)
 updateR()
 ```
 
-
-
 ## RStudio
 
 In RStudio -> Help -> Check for Updates -> follow instructions

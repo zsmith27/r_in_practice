@@ -1,0 +1,25 @@
+---
+title: "Title"
+output: html_document
+---
+
+# Header 1
+
+This is plain text. Below is a code chunk that will be visible in the compiled document.
+```{r, fig.height=2}
+suppressPackageStartupMessages(library(ggplot2))
+data("iris")
+
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  geom_point()
+
+```
+
+## Header 2
+
+__This is bold text.__ The code chunk will be hidden in the compiled document
+```{r, echo=FALSE, fig.height=2}
+ggplot(iris, aes(Species, Sepal.Width, color = Species)) +
+  geom_boxplot()
+```
+

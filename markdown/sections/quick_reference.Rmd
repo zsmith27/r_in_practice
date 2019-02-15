@@ -32,3 +32,42 @@ output: html_document
     + USGS GitHub: https://github.com/USGS-R
         + dataRetrieval (Acquire data from the Water Quality Portal): https://cran.r-project.org/web/packages/dataRetrieval/vignettes/dataRetrieval.html
         + EGRET (Analysis of long-term changes in water quality and streamflow): https://cran.r-project.org/web/packages/EGRET/vignettes/EGRET.pdf
+
+## Installation Links
+
+```{r, echo=FALSE}
+urls <- c("https://cran.r-project.org/bin/windows/base/",
+          "https://www.rstudio.com/products/rstudio/download/#download",
+          "https://git-scm.com/downloads")
+link.df <- data.frame(
+  Software = c("R", "R Studio", "Git"),
+  Link = paste0("[", urls, "](", urls, ")")
+)
+
+knitr::kable(link.df)
+```
+
+## Updating Software and Packages
+
+### R
+
+Run the following code in the R GUI (code copied from: https://www.r-statistics.com/2013/03/updating-r-from-r-on-windows-using-the-installr-package/). Make sure R Studio is closed.
+
+```{r, eval=FALSE}
+# installing/loading the package:
+if(!require(installr)) {
+install.packages("installr");
+require(installr)
+} #load / install+load installr
+
+# using the package:
+updateR()
+```
+
+### RStudio
+
+In RStudio -> Help -> Check for Updates -> follow instructions
+
+### R-Packages
+
+In RStudio -> Tools -> Check for Package Updates… - > follow instructions 
