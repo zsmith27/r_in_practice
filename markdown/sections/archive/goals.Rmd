@@ -1,0 +1,26 @@
+---
+title: "Untitled"
+author: "Zachary M. Smith"
+date: "February 7, 2019"
+output: html_document
+---
+
+# Goals
+
+1. To make you aware of the tools available to you.
+    + __ggplot2__ for creating figures
+    + __dplyr__ and __tidyr__ for data manipulation
+    + __lubridate__ for handling and formatting dates
+    + __rmarkdown__ for creating documents
+    + __shiny__ for creating interactive apps
+2. To provide you with the vocabulary and understanding of R syntax to...
+    + Understand how to ask meaningful questions
+    + Understand how to use functions
+    + Interpret example code
+
+
+R, like any other skill, is going to require you to invest a time to practice. I cannot help you with time management, but I can provide you with an 1) awareness of tools available and 2) the vocabulary and understanding of syntax to make practicing less frustrating.
+
+## Tip
+
+A good way to invest more time in R is to use R in situations where you would normally use MS Excel.
