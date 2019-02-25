@@ -15,34 +15,125 @@ output:
 file.copy("sections/images", ".", recursive = TRUE)
 ```
 
-```{r, child = 'sections/introduction.Rmd'}
+```{r, child = 'sections/01_introduction.Rmd'}
 
 ```
 
-```{r, child = 'sections/quick_reference.Rmd'}
+```{r, child = 'sections/02_quick_reference.Rmd'}
 
 ```
 
-```{r, child = 'sections/installation.Rmd'}
+```{r, child = 'sections/03_installation_updates.Rmd'}
 
 ```
 
-```{r, child = 'sections/update_software.Rmd'}
+```{r, child = 'sections/04_rstudio.Rmd'}
 
 ```
 
-```{r, child = 'sections/version_control.Rmd'}
+```{r, child = 'sections/05_r_project.Rmd'}
 
 ```
 
-```{r, child = 'sections/rmarkdown.Rmd'}
+```{r, child = 'sections/06_version_control.Rmd'}
 
 ```
 
-```{r, child = 'sections/style_guide.Rmd'}
+```{r, child = 'sections/07_rmarkdown.Rmd'}
 
 ```
 
-```{r, child = 'sections/shiny.Rmd'}
+```{r, child = 'sections/exercises/01_exercise.Rmd'}
 
 ```
+
+```{r, child = 'sections/08_data_types.Rmd'}
+
+```
+
+```{r, child = 'sections/exercises/02_exercise.Rmd'}
+
+```
+
+```{r, child = 'sections/09_data_structure_intro.Rmd'}
+
+```
+
+```{r, child = 'sections/10_data_structure_manipulation.Rmd'}
+
+```
+
+```{r, child = 'sections/exercises/03_exercise.Rmd'}
+
+```
+
+```{r, child = 'sections/11_style_guide.Rmd'}
+
+```
+
+```{r, child = 'sections/12_writing_functions.Rmd'}
+
+```
+
+```{r, child = 'sections/exercises/04_exercise.Rmd'}
+
+```
+
+```{r, child = 'sections/13_loops.Rmd'}
+
+```
+
+```{r, child = 'sections/exercises/05_exercise.Rmd'}
+
+```
+
+```{r, child = 'sections/14_tidyverse_intro.Rmd'}
+
+```
+
+```{r, child = 'sections/exercises/06_exercise.Rmd'}
+
+```
+
+```{r, child = 'sections/15_dplyr.Rmd'}
+
+```
+
+```{r, child = 'sections/exercises/07_exercise.Rmd'}
+
+```
+
+```{r, child = 'sections/16_tidyr.Rmd'}
+
+```
+
+```{r, child = 'sections/exercises/08_exercise.Rmd'}
+
+```
+
+```{r, child = 'sections/17_lubridate.Rmd'}
+
+```
+
+```{r, child = 'sections/exercises/09_exercise.Rmd'}
+
+```
+
+```{r, child = 'sections/18_ggplot2.Rmd'}
+
+```
+
+```{r, child = 'sections/exercises/10_exercise.Rmd'}
+
+```
+
+```{r, child = 'sections/19_shiny.Rmd'}
+
+```
+
+```{r, child = 'sections/exercises/11_exercise.Rmd'}
+
+```
+
+
+
