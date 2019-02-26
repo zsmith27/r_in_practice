@@ -347,13 +347,20 @@ percent.df <- order.df %>%
 
 ### Joins
 
-*__Link:__ https://dplyr.tidyverse.org/reference/join.html
-* [left_join]
-* [right_join]
-* [full_join]
-* [inner_join]
-* [semi_join]
-* [anti_join]
+* __Link:__ https://dplyr.tidyverse.org/reference/join.html
+* __Definition:__ Combine two data sets by common features. "a" and "b" will be used in the descriptions below to represent two data sets.
+* [left_join] Join only rows in "b" that have a match in "a"
+* [right_join] Join only rows in "a" that have a match in "b"
+* [full_join] Join all rows from "a" with all rows from "b"
+* [inner_join] Join only rows that are present in both "a" and "b"
+* [semi_join] Keep only rows in "a" that are found in "b" 
+    + "b" is not actually joined with "a" 
+    + This is more like a filter
+    + Opposite of an `anti_join()`
+* [anti_join] Keep only rows in "a" that are __NOT__ found in "b" 
+    + "b" is not actually joined with "a" 
+    + This is more like a filter
+    + Opposite of an `semi_join()`
 
 #### left_join
 
@@ -381,6 +388,15 @@ full.df <- taxa.df %>%
 DT::datatable(full.df, options = list(scrollX = TRUE))
 ```
 
+#### inner_join
+
+```{r}
+full.df <- taxa.df %>% 
+  filter(lake == "onon") %>% 
+  inner_join(env.df, by = "unique_id")
+
+DT::datatable(full.df, options = list(scrollX = TRUE))
+```
 
 #### semi_join
 
@@ -415,10 +431,12 @@ DT::datatable(nest.df, options = list(scrollX = TRUE))
 
 ### Bind
 
-*__Link:__ https://dplyr.tidyverse.org/reference/bind.html
+* __Link:__ https://dplyr.tidyverse.org/reference/bind.html
+* __Definition:__ Append rows or columns on to a data frame.
 
 #### bind_rows
 
+To show how `bind_rows()` work, let's first split `taxa.df` into three data frames representing the three lakes in the data set.
 ```{r}
 onon.df <- taxa.df %>% 
   filter(lake == "onon")
@@ -430,9 +448,7 @@ caz.df <- taxa.df %>%
   filter(lake == "caz")
 ```
 
-
-
-
+If we wanted to combine these data frames back into one data frame, we can call all of them within `bind_rows()`. Generally, you want to have matching column headers; however, `bind_rows()` will recognize columns that are unique to one data frame and add them into the appended data frame. The data frame(s) that did not contain this column will have `NA` as the values in this column.
 ```{r}
 bind.df <- bind_rows(onon.df, otis.df, caz.df)
 
@@ -441,6 +457,9 @@ DT::datatable(bind.df, options = list(scrollX = TRUE))
 
 #### bind_cols
 
+`bind_cols()` is similar to `bind_rows()` but instead appends columns. __I rarely find use for this function becuase in general I would prefer a [Join]. __
+
+Let's extract the taxonomic hierarchy information from `onon.df` and store it as a data frame object called `hier.df`.
 ```{r}
 hier.df <- onon.df %>% 
   select(phylum:species)
@@ -448,6 +467,7 @@ hier.df <- onon.df %>%
 DT::datatable(hier.df, options = list(scrollX = TRUE))
 ```
 
+Let's extract the taxonomic count information from `onon.df` and store it as a data frame object called `count.df`.
 ```{r}
 count.df <- onon.df %>% 
   select(unique_id, final_id, count)
@@ -455,6 +475,7 @@ count.df <- onon.df %>%
 DT::datatable(count.df, options = list(scrollX = TRUE))
 ```
 
+`hier.df` and `count.df` have the same number of rows, and therefore the columns can be appended together with `bind_cols()`
 ```{r}
 bind.df <- bind_cols(count.df, hier.df)
 

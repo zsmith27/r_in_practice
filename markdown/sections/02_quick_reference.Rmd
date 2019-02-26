@@ -17,6 +17,7 @@ output: html_document
     + Google: https://google.github.io/styleguide/Rguide.xml
 5. Books and Papers
     + R for Data Science: http://r4ds.had.co.nz/
+    + The Art of R Programming: http://heather.cs.ucdavis.edu/~matloff/132/NSPpart.pdf
     + Advanced R: http://adv-r.had.co.nz/
     + R Packages: http://r-pkgs.had.co.nz/
     + Tidy Data: https://www.jstatsoft.org/article/view/v059i10

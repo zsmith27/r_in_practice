@@ -131,9 +131,6 @@ file.copy("sections/images", ".", recursive = TRUE)
 
 ```
 
-```{r, child = 'sections/exercises/11_exercise.Rmd'}
+```{r, child = 'sections/20_shiny.Rmd'}
 
 ```
-
-
-
